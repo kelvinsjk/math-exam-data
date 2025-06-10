@@ -1,11 +1,13 @@
-import { quotient } from "mathlify";
+import { quotient, greek } from "mathlify";
 import { Line, Vector } from "mathlify/vectors";
 
 export const parameters = {
-	aircraft: new Line([4, 3, 2], [1, -1, 2]),
+	aircraft: new Line([4, 3, 1], [1, -1, 2]),
 	z: 0.1,
 	radius: 4,
-	drone: new Line([quotient(3, 2), -1, "k"], [quotient(3, 2), 1, -1]),
+	drone: new Line([quotient(3, 2), -1, "k"], [quotient(3, 2), 1, -1], {
+		parameter: greek("mu"),
+	}),
 	k: 2,
 	pts: [new Vector(4, 3, 1), new Vector(4.2, 0.8, 0.2)],
 } as const;

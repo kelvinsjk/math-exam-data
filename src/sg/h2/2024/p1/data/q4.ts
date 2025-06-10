@@ -3,7 +3,7 @@ import { Polynomial, quotient } from "mathlify";
 export const parameters = {
 	lhs: quotient(4, new Polynomial([1, 2])),
 	rhs: quotient(new Polynomial([1, -3]), new Polynomial("x")),
-	sign: "\\geq ",
+	sign: "\\geq",
 } as const;
 
 /*
