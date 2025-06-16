@@ -10,9 +10,16 @@
 		"type": "git",
 		"url": "https://github.com/kelvinsjk/math-exam-data"
 	},
-	"keywords": [],
+	"keywords": [
+		
+	],
 	"author": "Kelvin Soh",
 	"dependencies": {
 		"@changesets/cli": "^2.29.4"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
