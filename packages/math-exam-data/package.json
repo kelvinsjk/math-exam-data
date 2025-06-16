@@ -1,0 +1,21 @@
+{
+  "name": "math-exam-data",
+  "version": "1.0.0",
+  "description": "Examination data from past exams",
+  "main": "index.js",
+  "scripts": {
+    "publint": "publint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC BY-NC-SA 4.0",
+  "packageManager": "pnpm@10.11.1",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "mathlifier": "^3.0.0",
+    "mathlify": "^0.4.2",
+    "publint": "^0.3.12",
+    "typescript": "^5.8.3"
+  }
+}
