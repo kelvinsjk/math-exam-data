@@ -1,30 +1,30 @@
-import type { Part, QuestionObject, Subpart } from "./types.js";
+import type { Part, QnObject, Subpart } from "./types.js";
 
 /**
  * Helper class for creating a question.
  * The actual Question-object is stored in the `question` property
  */
-export class Question {
-	question: QuestionObject = {};
+export class Qn {
+	qn: QnObject = {};
 
 	constructor(
 		body: string | undefined = undefined,
 		options: { marks?: number; newpage?: boolean; source?: string } = {},
 	) {
-		if (body) this.question.body = body;
-		if (options.marks) this.question.marks = options.marks;
-		if (options.newpage) this.question.newpage = options.newpage;
-		if (options.source) this.question.source = options.source;
+		if (body) this.qn.body = body;
+		if (options.marks) this.qn.marks = options.marks;
+		if (options.newpage) this.qn.newpage = options.newpage;
+		if (options.source) this.qn.source = options.source;
 	}
 
 	addBody(
 		body: string,
 		options: { marks?: number; newpage?: boolean; source?: string } = {},
 	) {
-		this.question.body += body;
-		if (options.marks) this.question.marks = options.marks;
-		if (options.newpage) this.question.newpage = options.newpage;
-		if (options.source) this.question.source = options.source;
+		this.qn.body = body;
+		if (options.marks) this.qn.marks = options.marks;
+		if (options.newpage) this.qn.newpage = options.newpage;
+		if (options.source) this.qn.source = options.source;
 	}
 	body = this.addBody;
 
@@ -32,9 +32,9 @@ export class Question {
 		partBody: string | undefined = undefined,
 		options: { marks?: number; newpage?: boolean; uplevel?: string } = {},
 	) {
-		if (this.question.parts === undefined) this.question.parts = [];
+		if (this.qn.parts === undefined) this.qn.parts = [];
 		const part: Part = {};
-		this.question.parts.push(part);
+		this.qn.parts.push(part);
 		if (partBody) part.body = partBody;
 		if (options.marks) part.marks = options.marks;
 		if (options.newpage) part.newpage = options.newpage;
@@ -46,11 +46,11 @@ export class Question {
 		subpartBody: string | undefined = undefined,
 		options: { marks?: number; newpage?: boolean; uplevel?: string } = {},
 	) {
-		if (this.question.parts === undefined) this.question.parts = [];
-		let part = this.question.parts[this.question.parts.length - 1];
+		if (this.qn.parts === undefined) this.qn.parts = [];
+		let part = this.qn.parts[this.qn.parts.length - 1];
 		if (part === undefined) {
 			part = {};
-			this.question.parts.push(part);
+			this.qn.parts.push(part);
 		}
 		const subpart: Subpart = {};
 		if (part.parts === undefined) part.parts = [];
@@ -62,15 +62,15 @@ export class Question {
 	}
 	subpart = this.addSubpart;
 
-	get marks(): number {
-		let mark = this.question.marks ?? 0;
-		for (const part of this.question.parts ?? []) {
-			mark += part.marks ?? 0;
+	get mark(): number {
+		let m = this.qn.marks ?? 0;
+		for (const part of this.qn.parts ?? []) {
+			m += part.marks ?? 0;
 			for (const subpart of part.parts ?? []) {
-				mark += subpart.marks ?? 0;
+				m += subpart.marks ?? 0;
 			}
 		}
-		return mark;
+		return m;
 	}
 }
 
@@ -78,30 +78,30 @@ export class Question {
  * Helper class for creating questions.
  * Use the `questions` getter to get the actual Question-objects
  */
-export class Questions {
+export class Qns {
 	// questions stored as class instances
-	_questions: Question[] = [];
+	_qns: Qn[] = [];
 
-	addQuestion(question?: Question | QuestionObject) {
-		let qn: Question;
+	addQn(question?: Qn | QnObject) {
+		let qn: Qn;
 		if (question === undefined) {
-			qn = new Question();
-		} else if (question instanceof Question) {
+			qn = new Qn();
+		} else if (question instanceof Qn) {
 			qn = question;
 		} else {
-			qn = new Question();
-			qn.question = question;
+			qn = new Qn();
+			qn.qn = question;
 		}
-		this._questions.push(qn);
+		this._qns.push(qn);
 	}
-	qn = this.addQuestion;
+	qn = this.addQn;
 
 	addBody(
 		body: string,
 		options: { marks?: number; newpage?: boolean; source?: string } = {},
 	) {
-		if (this._questions.length === 0) this.addQuestion();
-		this._questions[this._questions.length - 1].addBody(body, options);
+		if (this._qns.length === 0) this.addQn();
+		this._qns[this._qns.length - 1].addBody(body, options);
 	}
 	body = this.addBody;
 
@@ -109,8 +109,8 @@ export class Questions {
 		partBody: string | undefined = undefined,
 		options: { marks?: number; newpage?: boolean; uplevel?: string } = {},
 	) {
-		if (this._questions.length === 0) this.addQuestion();
-		this._questions[this._questions.length - 1].addPart(partBody, options);
+		if (this._qns.length === 0) this.addQn();
+		this._qns[this._qns.length - 1].addPart(partBody, options);
 	}
 	part = this.addPart;
 
@@ -118,8 +118,8 @@ export class Questions {
 		subpartBody: string | undefined = undefined,
 		options: { marks?: number; newpage?: boolean; uplevel?: string } = {},
 	) {
-		if (this._questions.length === 0) this.addQuestion();
-		this._questions[this._questions.length - 1].addSubpart(
+		if (this._qns.length === 0) this.addQn();
+		this._qns[this._qns.length - 1].addSubpart(
 			subpartBody,
 			options,
 		);
@@ -127,10 +127,10 @@ export class Questions {
 	subpart = this.addSubpart;
 
 	get marks(): number {
-		return this._questions.reduce((a, b) => a + b.marks, 0);
+		return this._qns.reduce((a, b) => a + b.mark, 0);
 	}
 
-	get questions(): QuestionObject[] {
-		return this._questions.map((q) => q.question);
+	get questions(): QnObject[] {
+		return this._qns.map((q) => q.qn);
 	}
 }
