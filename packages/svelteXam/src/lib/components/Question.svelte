@@ -2,8 +2,17 @@
   import type { QnObject } from "$lib/classes/types.js";
   import { Qn } from "$lib/classes/qn.js";
 
-  let { qnNo = 1, qn }: {qnNo?: number, qn: Qn|QnObject} = $props();
-  const question = qn instanceof Qn ? qn.qn : qn;
+  let { qnNo=1, qn, contentHandler=(x)=>x, subgrid, link=undefined, ariaName='q' }
+    : {
+      qn: Qn|QnObject,
+      qnNo?: number|undefined,
+      contentHandler?: (x: string) => string,
+      subgrid?: boolean,
+      link?: string,
+      ariaName?: string
+    } 
+      = $props();
+  const question = $derived(qn instanceof Qn ? qn.qn : qn);
   
   function toRoman(i: number): string {
     const roman = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii','viii','ix','x'];
@@ -14,38 +23,54 @@
   }
 </script>
 
-<section aria-label={`q${qnNo}`} class="qn">
+<section aria-label={`${ariaName}${qnNo ?? 0}`} id={`${ariaName}${qnNo}`} class="qn" class:subgrid>
   <!--qn label-->
-  <div class="qn-label">
-    {qnNo}{#if qn.body}.{/if}
-  </div>
+  {#if qnNo}
+    {#if link}
+    <a class="qn-label" href={`#${link}${qnNo}`}>{qnNo}.</a>
+    {:else}
+    <div class="qn-label">{qnNo}.</div>
+    {/if}
+  {/if}
   <!--qn body-->
   {#if question.body}
-  <div class="content" class:noMarks={!question.marks}>{@html qn.body}</div>
+  <div class="content" class:noMarks={!question.marks}>{@html contentHandler(question.body)}</div>
   {/if}
   {#if question.marks}
   <div class="marks">[{question.marks}]</div>
   {/if}
   {#each question.parts??[] as part,i}
+    {@const partLabel = String.fromCharCode(97+i)}
+    {@const id = `${ariaName}${qnNo}${partLabel}`}
     {#if part.uplevel}
-    <div class="uplevel">{@html part.uplevel}</div>
+    <div class="uplevel">{@html contentHandler(part.uplevel)}</div>
     {/if}
-    <section class="part" aria-label={`q${qnNo}${String.fromCharCode(97+i)}`}>
-      <div class="part-label">({String.fromCharCode(97+i)})</div>
+    <section class="part" aria-label={id} {id} >
+      {#if link}
+      <a class="part-label" href={`#${link}${qnNo}${partLabel}`}>({partLabel})</a>
+      {:else}
+      <div class="part-label">({partLabel})</div>
+      {/if}
       {#if part.body}
-      <div class="content" class:noMarks={!part.marks}>{@html part.body}</div>
+      <div class="content" class:noMarks={!part.marks}>{@html contentHandler(part.body)}</div>
       {/if}
       {#if part.marks}
       <div class="marks">[{part.marks}]</div>
       {/if}
       {#each part.parts??[] as subpart,j}
+        {@const subpartLabel = toRoman(j)}
+        {@const id = `${ariaName}${qnNo}${partLabel}${subpartLabel}`}
         {#if subpart.uplevel}
-        <div class="uplevel">{@html subpart.uplevel}</div>
+        <div class="uplevel">{@html contentHandler(subpart.uplevel)}</div>
         {/if}
-        <section class="subpart" aria-label={`q${qnNo}${String.fromCharCode(97+i)}${toRoman(j)}`}>
-          <div class="subpart-label">({toRoman(j)})</div>
+        <section class="subpart" aria-label={id} {id}>
+          {#if link}
+          <a class="subpart-label" href={`#${link}${qnNo}${partLabel}${subpartLabel}`}>({subpartLabel})</a>
+          {:else}
+          <div class="subpart-label">({subpartLabel})</div>
+          {/if}
           {#if subpart.body}
-          <div class="content" class:noMarks={!subpart.marks}>{@html subpart.body}</div>
+          <div class="content" class:noMarks={!subpart.marks}>{@html contentHandler(subpart.body)}</div>
           {/if}
           {#if subpart.marks}
           <div class="marks">[{subpart.marks}]</div>
@@ -61,6 +86,12 @@
     display: grid;
     grid-template-columns: [qn-label] auto [part-label] auto [subpart-label] auto [main-start] 1fr [main-end] auto [marks-end];
     max-width: var(--qn-max-width, 75ch);
+    column-gap: var(--qn-column-gap, 0.5rem);
+    row-gap: var(--qn-row-gap, 0.5rem);
+  }
+  section.qn.subgrid {
+    grid-column: qn-label / marks-end;
+    grid-template-columns: subgrid;
   }
   section.part {
     grid-column: part-label / marks-end;
@@ -83,9 +114,6 @@
   .subpart-label {
     grid-column: subpart-label / main-start;
   }
-  .content {
-    margin-inline: var(--content-margin, 0.5rem);
-  }
   .qn > .uplevel {
     grid-column: qn-label / main-end;
   }
@@ -100,11 +128,18 @@
   }
   .qn .noMarks {
     grid-column-end: marks-end;
-    margin-inline-end: 0;
   }
   .marks {
     grid-column: main-end / marks-end;
     display: flex;
     justify-content: flex-end;
+  }
+  .content>:global(*:first-child), 
+  .uplevel>:global(*:first-child) {
+    margin-block-start: var(--qn-first-content-margin, 0);
+  }
+  .content>:global(*:last-child), 
+  .uplevel>:global(*:last-child) {
+    margin-block-end: var(--qn-last-content-margin, 0);
   }
 </style>

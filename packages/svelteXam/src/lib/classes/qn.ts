@@ -130,7 +130,7 @@ export class Qns {
 		return this._qns.reduce((a, b) => a + b.mark, 0);
 	}
 
-	get questions(): QnObject[] {
+	get qns(): QnObject[] {
 		return this._qns.map((q) => q.qn);
 	}
 }

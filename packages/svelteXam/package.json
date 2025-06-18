@@ -13,8 +13,14 @@
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:e2e": "playwright test"
 	},
-	"files": ["dist", "!dist/**/*.test.*", "!dist/**/*.spec.*"],
-	"sideEffects": ["**/*.css"],
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"sideEffects": [
+		"**/*.css"
+	],
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
@@ -27,6 +33,7 @@
 	"peerDependencies": {
 		"svelte": "^5.0.0"
 	},
+	"license": "MIT",
 	"devDependencies": {
 		"@playwright/test": "^1.49.1",
 		"@sveltejs/adapter-auto": "^6.0.0",
@@ -37,11 +44,13 @@
 		"@testing-library/svelte": "^5.2.4",
 		"jsdom": "^26.0.0",
 		"publint": "^0.3.2",
-		"svelte": "^5.0.0",
+		"svelte": "^5.34.5",
 		"svelte-check": "^4.0.0",
 		"typescript": "^5.0.0",
 		"vite": "^6.2.6",
-		"vitest": "^3.2.3"
+		"vitest": "^3.2.4"
 	},
-	"keywords": ["svelte"]
+	"keywords": [
+		"svelte"
+	]
 }
