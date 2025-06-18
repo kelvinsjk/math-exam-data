@@ -1,8 +1,5 @@
-import { vec } from "../../utils/vectors";
 import { Vector } from "mathlify/vectors";
 
-const [a, b] = [vec("a"), vec("b")];
-const aCrossB = `${a} \\times ${b}`;
 export const parameters = {
 	A: new Vector(-1, 2, 5),
 	B: new Vector(1, -2, 8),

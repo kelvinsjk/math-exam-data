@@ -1,18 +1,18 @@
 export const parameters = {
 	n: 6,
 	p: 0.25,
+	nB: 50,
 	tableData: [
-		[0,1,2,3,4,5,'6 or more'],
-		[57,9,6,4,3,1,0]
+		[0, 1, 2, 3, 4, 5, "6 or more"],
+		[57, 9, 6, 4, 3, 1, 0],
 	],
-	nB: 120,
-	pB: 0.03,
-	ineqB: 'fewer than',
-	xB: 3,
-	nBIII: 28,
-	ineqBIII: 'more than',
-	xBIII: 100,
-
+	nC: 120,
+	pC: 0.03,
+	ineqC: "fewer than",
+	xC: 3,
+	nCIII: 28,
+	ineqCIII: "more than",
+	xCIII: 100,
 } as const;
 
 /*

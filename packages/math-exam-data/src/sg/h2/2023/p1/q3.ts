@@ -1,5 +1,5 @@
 import { sum } from "mathlify";
-import { vec } from "../../utils/vectors";
+import { vec } from "../../utils/vectors.js";
 
 const [a, b] = [vec("a"), vec("b")];
 const aCrossB = `${a} \\times ${b}`;

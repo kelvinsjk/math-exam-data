@@ -3,8 +3,9 @@ import { Polynomial } from "mathlify";
 export const parameters = {
 	scaleFactor: 2,
 	translateX: 1,
-	x: Polynomial.ofDegree(2,{variable: 't'}),
-	y: new Polynomial([2,3],{variable:'t'})
+	tDomain: [-4, 4],
+	x: Polynomial.ofDegree(2, { variable: "t" }),
+	y: new Polynomial([2, 3], { variable: "t" }),
 } as const;
 
 /*

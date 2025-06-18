@@ -1,19 +1,18 @@
 export const parameters = {
 	plates: [200, 1.6],
-	ineqA: 'more than',
+	ineqA: "more than",
 	xA: 197.5,
 	reduction: 5,
 	nB: 8,
-	ineqB: 'at least',
-	xb: 5,
-	bounds: [190,192],
+	ineqB: "at least",
+	xB: 5,
+	bounds: [190, 192],
 	nC: 20,
-	ineqC: 'less than',
+	ineqC: "less than",
 	xC: 3805,
-	nD: 20,
 	screws: [10, 0.3],
-	bolts: [44,1.1],
-	percentage: 5
+	bolts: [44, 1.1],
+	percentage: 5,
 } as const;
 
 /*

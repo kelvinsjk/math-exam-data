@@ -1,8 +1,9 @@
 import { Polynomial, quotient, sum } from "mathlify";
 
 export const parameters = {
-	f: new Polynomial([-1,4,7]),
-	g: sum(quotient(2,'x'),1),
+	f: new Polynomial([-1, 4, 7]),
+	g: sum(quotient(2, "x"), 1),
+	domainG: [1, 10],
 	x: 1.5,
 } as const;
 

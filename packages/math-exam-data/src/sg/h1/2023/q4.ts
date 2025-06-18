@@ -1,5 +1,5 @@
 import { Polynomial } from "mathlify";
-import { logTerm } from "mathlify/calculus";
+import { logTerm } from "mathlify/fns";
 
 export const parameters = {
 	y: logTerm(new Polynomial([1, 0, 1], { ascending: true })),

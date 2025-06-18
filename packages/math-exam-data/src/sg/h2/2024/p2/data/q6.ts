@@ -1,6 +1,7 @@
 export const parameters = {
-	members: [27,45,18],
-	choose: 6
+	members: [27, 45, 18],
+	replies: 65,
+	choose: 6,
 } as const;
 
 /*

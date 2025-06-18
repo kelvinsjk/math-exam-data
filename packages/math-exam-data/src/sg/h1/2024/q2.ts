@@ -1,11 +1,10 @@
 import { expTerm, Polynomial, product, quotient } from "mathlify";
-import { logTerm } from "mathlify/calculus";
-import { sqrtTerm } from "mathlify/fns";
+import { logTerm, sqrtTerm } from "mathlify/fns";
 
 export const parameters = {
-	exp1: product(4, logTerm([new Polynomial([2,7]), '^', 2])),
-	exp2: sqrtTerm(expTerm(new Polynomial([1,4]))),
-	integrand: quotient(3, sqrtTerm(new Polynomial([5,1])))
+	exp1: product(4, logTerm([new Polynomial([2, 7]), "^", 2])),
+	exp2: sqrtTerm(expTerm(new Polynomial([1, 4]))),
+	integrand: quotient(3, sqrtTerm(new Polynomial([5, 1]))),
 } as const;
 
 /*

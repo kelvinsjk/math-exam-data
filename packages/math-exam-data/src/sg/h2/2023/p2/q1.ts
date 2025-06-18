@@ -1,5 +1,4 @@
-import { Expression, Polynomial, product, quotient, sum } from "mathlify";
-import { logTerm } from "mathlify/calculus";
+import { Polynomial, product, quotient, sum } from "mathlify";
 import { absTerm } from "mathlify/fns";
 
 const rational = quotient(new Polynomial([1, 25]), new Polynomial([1, -4, -5]));

@@ -1,6 +1,6 @@
 import { pi, product, productVerbatim, quotient } from "mathlify";
-import { Differential, logTerm } from "mathlify/calculus";
-import { Brackets, trigTerm } from "mathlify/fns";
+import { Differential } from "mathlify/calculus";
+import { Brackets, logTerm, trigTerm } from "mathlify/fns";
 
 export const parameters = {
 	y: logTerm(trigTerm("sec", "x")),

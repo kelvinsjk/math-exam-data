@@ -1,10 +1,11 @@
 import { Polynomial } from "mathlify";
 
 export const parameters = {
-	T: new Polynomial([2,-8,-4,0],{variable: 'n'}),
-	u: new Polynomial([50,-204],{variable: 'n'}),
-	v: new Polynomial([3,16],{variable:'n'}),
-	w: new Polynomial([3,-5,7],{variable:'n'})
+	T: new Polynomial([2, -8, -4, 0], { variable: "n" }),
+	u: new Polynomial([50, -204], { variable: "n" }),
+	v: new Polynomial([3, 16], { variable: "n" }),
+	cBound: 100,
+	w: new Polynomial([3, -5, 7], { variable: "n" }),
 } as const;
 
 /*

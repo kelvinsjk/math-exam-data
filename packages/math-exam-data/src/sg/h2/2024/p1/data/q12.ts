@@ -1,4 +1,4 @@
-import { quotient, greek } from "mathlify";
+import { greek, quotient } from "mathlify";
 import { Line, Vector } from "mathlify/vectors";
 
 export const parameters = {

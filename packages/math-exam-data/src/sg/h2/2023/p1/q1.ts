@@ -1,5 +1,5 @@
 import { Expression, Polynomial } from "mathlify";
-import { logTerm } from "mathlify/calculus";
+import { logTerm } from "mathlify/fns";
 
 export const parameters = {
 	curve: [
