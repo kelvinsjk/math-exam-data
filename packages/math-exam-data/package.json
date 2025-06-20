@@ -24,7 +24,7 @@
 		"@biomejs/biome": "^2.0.0",
 		"@djot/djot": "^0.3.2",
 		"mathlifier": "^3.0.0",
-		"mathlify": "^0.4.3",
+		"mathlify": "^0.4.9",
 		"publint": "^0.3.12",
 		"temml": "^0.11.8",
 		"typescript": "^5.8.3"
