@@ -1,28 +1,33 @@
 <script lang="ts">
-  import type { QnObject } from "$lib/classes/types.js";
   import { Qn } from "$lib/classes/qn.js";
   import type { StackedQn } from "$lib/classes/stacked.js";
+  import type { QnObject } from "$lib/classes/types.js";
   import Question from "./Question.svelte";
 
-  let { qnNo=1, qn, contentHandler=(x)=>x, subgrid, ariaNames=['q', 'ans'] }
-    : {
-      qnNo?: number|undefined,
-      contentHandler?: (x: string) => string, 
-      subgrid?: boolean,
-      qn: StackedQn|(Qn|QnObject)[], 
-      ariaNames?: string[]
-    } 
-      = $props();
-  const qnArr = $derived.by(()=>{
+  let {
+    qnNo = 1,
+    qn,
+    contentHandler = (x) => x,
+    subgrid,
+    ariaNames = ["q", "ans"],
+  }: {
+    qnNo?: number | undefined;
+    contentHandler?: (x: string) => string;
+    subgrid?: boolean;
+    qn: StackedQn | (Qn | QnObject)[];
+    ariaNames?: string[];
+  } = $props();
+  const qnArr = $derived.by(() => {
     const qnArr = Array.isArray(qn) ? qn : qn.data;
-    return qnArr.map((qn) => qn instanceof Qn ? qn.qn : qn);
+    return qnArr.map((qn) => (qn instanceof Qn ? qn.qn : qn));
   });
 </script>
 
 <section aria-label={"stacked-question"} class="stacked-question" class:subgrid>
   {#each qnArr as qn, i}
-    {@const ariaName = ariaNames[i] ?? 'q'}
-    {@const link = i===qnArr.length-1 ? undefined : ariaNames[i+1] ?? `q${i}`}
+    {@const ariaName = ariaNames[i] ?? "q"}
+    {@const link =
+      i === qnArr.length - 1 ? undefined : (ariaNames[i + 1] ?? `q${i}`)}
     <Question {qnNo} {qn} {contentHandler} subgrid={true} {ariaName} {link} />
   {/each}
 </section>

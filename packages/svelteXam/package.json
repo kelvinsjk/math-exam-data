@@ -28,6 +28,12 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./helpers": {
+			"types": "./dist/helpers.d.ts",
+			"import": "./dist/helpers.js",
+			"require": "./dist/helpers.js",
+			"svelte": "./dist/helpers.js"
 		}
 	},
 	"peerDependencies": {

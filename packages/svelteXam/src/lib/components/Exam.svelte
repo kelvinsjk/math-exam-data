@@ -1,20 +1,28 @@
 <script lang="ts">
+  import { Qn, type Qns } from "$lib/classes/qn.js";
   import type { QnObject } from "$lib/classes/types.js";
-  import { Qns, Qn } from "$lib/classes/qn.js";
   import Question from "./Question.svelte";
 
-  let { qns, contentHandler=(x)=>x }
-    : {qns: Qns|Qn[]|QnObject[], contentHandler?: (x: string) => string} 
-      = $props();
-  const questions = $derived.by(()=>{
+  let {
+    qns,
+    contentHandler = (x) => x,
+    ariaName = "q",
+    link = undefined,
+  }: {
+    qns: Qns | Qn[] | QnObject[];
+    contentHandler?: (x: string) => string;
+    ariaName?: string;
+    link?: string;
+  } = $props();
+  const questions = $derived.by(() => {
     const qnArr = Array.isArray(qns) ? qns : qns.qns;
-    return qnArr.map((qn) => qn instanceof Qn ? qn.qn : qn)
+    return qnArr.map((qn) => (qn instanceof Qn ? qn.qn : qn));
   });
 </script>
 
-<section aria-label={"exam"} class="exam">
+<section aria-label={ariaName} class="exam">
   {#each questions as qn, i}
-    <Question qnNo={i+1} {qn} {contentHandler} subgrid />
+    <Question qnNo={i + 1} {qn} {contentHandler} {ariaName} subgrid {link} />
   {/each}
 </section>
 
