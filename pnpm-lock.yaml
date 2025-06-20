@@ -24,8 +24,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       mathlify:
-        specifier: ^0.4.3
-        version: 0.4.3
+        specifier: ^0.4.9
+        version: 0.4.9
       publint:
         specifier: ^0.3.12
         version: 0.3.12
@@ -79,6 +79,58 @@ importers:
         version: 6.3.5
       vitest:
         specifier: ^3.2.4
+        version: 3.2.4(jsdom@26.1.0)
+
+  sites/repo:
+    dependencies:
+      math-exam-data:
+        specifier: workspace:math-exam-data
+        version: link:../../packages/math-exam-data
+      mathlifier:
+        specifier: ^3.2.2
+        version: 3.2.2
+      mathlify:
+        specifier: ^0.4.9
+        version: 0.4.9
+      sveltexam:
+        specifier: workspace:sveltexam
+        version: link:../../packages/svelteXam
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.53.1
+        version: 1.53.1
+      '@sveltejs/adapter-auto':
+        specifier: ^6.0.0
+        version: 6.0.1(@sveltejs/kit@2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5))
+      '@sveltejs/kit':
+        specifier: ^2.16.0
+        version: 2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5)
+      '@sveltejs/vite-plugin-svelte':
+        specifier: ^5.0.0
+        version: 5.1.0(svelte@5.34.7)(vite@6.3.5)
+      '@testing-library/jest-dom':
+        specifier: ^6.6.3
+        version: 6.6.3
+      '@testing-library/svelte':
+        specifier: ^5.2.4
+        version: 5.2.8(svelte@5.34.7)(vite@6.3.5)(vitest@3.2.4(jsdom@26.1.0))
+      jsdom:
+        specifier: ^26.0.0
+        version: 26.1.0
+      svelte:
+        specifier: ^5.34.6
+        version: 5.34.7
+      svelte-check:
+        specifier: ^4.0.0
+        version: 4.2.1(picomatch@4.0.2)(svelte@5.34.7)(typescript@5.8.3)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.8.3
+      vite:
+        specifier: ^6.2.6
+        version: 6.3.5
+      vitest:
+        specifier: ^3.2.3
         version: 3.2.4(jsdom@26.1.0)
 
 packages:
@@ -434,6 +486,11 @@ packages:
 
   '@playwright/test@1.53.0':
     resolution: {integrity: sha512-15hjKreZDcp7t6TL/7jkAo6Df5STZN09jGiv5dbP9A6vMVncXRqE7/B2SncsyOwrkZRBH2i6/TPOL8BVmm3c7w==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  '@playwright/test@1.53.1':
+    resolution: {integrity: sha512-Z4c23LHV0muZ8hfv4jw6HngPJkbbtZxTkxPNIg7cJcTc9C28N/p2q7g3JZS2SiKBBHJ3uM1dgDye66bB7LEk5w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1032,8 +1089,11 @@ packages:
   mathlifier@3.0.0:
     resolution: {integrity: sha512-nDGMLm/lX6yXb0THJDGZP2rwA6EOpfVPXCNFgH/97Ql2OEFpp6Tvc1PxilwkkLN0xAjQNlJha3Nic6wExqiz+w==}
 
-  mathlify@0.4.3:
-    resolution: {integrity: sha512-lJh35oEr+lUbJu/SKhltqcUTEgRUkv/D+pqt0gf3hE+hf8ERdaxT94cV0G9kES3HrNuDoqIfMwAAfunPkbfvoQ==}
+  mathlifier@3.2.2:
+    resolution: {integrity: sha512-aMDT36PMt8onj6K1/jPCgePCp0ecmhfEyvyp1vyQsoTwI8jYr1W4E24SI8v9xOq/61zkSCzsp+gakK9iOgI32g==}
+
+  mathlify@0.4.9:
+    resolution: {integrity: sha512-HOcWO92+gIOH0B0VfbhT1e8fMA1GPAb2gQtZA4Sp61YBGU1O6pf6WbHBie7/3jKUiop0fdJpCVDhJtj1RDS9TA==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -1147,8 +1207,18 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  playwright-core@1.53.1:
+    resolution: {integrity: sha512-Z46Oq7tLAyT0lGoFx4DOuB1IA9D1TPj0QkYxpPVUnGDqHHvDpCftu1J2hM2PiWsNMoZh8+LQaarAWcDfPBc6zg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   playwright@1.53.0:
     resolution: {integrity: sha512-ghGNnIEYZC4E+YtclRn4/p6oYbdPiASELBIYkBXfaTVKreQUYbMUYQDwS12a8F0/HtIjr/CkGjtwABeFPGcS4Q==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.53.1:
+    resolution: {integrity: sha512-LJ13YLr/ocweuwxyGf1XNFWIU4M2zUSo149Qbp+A4cpwDjsxRPj7k6H25LBrEHiEwxvRbD8HdwvQmRMSvquhYw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1307,6 +1377,10 @@ packages:
 
   svelte@5.34.5:
     resolution: {integrity: sha512-MMqhT/iTdwExPcyBCt+Bqxv7FV+LpSciej/gVgd/Vj7zRF9iPgRWGBxiVAwfzPYAOgwgFigIAQV8VJfhyB08/w==}
+    engines: {node: '>=18'}
+
+  svelte@5.34.7:
+    resolution: {integrity: sha512-5PEg+QQKce4t1qiOtVUhUS3AQRTtxJyGBTpxLcNWnr0Ve8q4r06bMo0Gv8uhtCPWlztZHoi3Ye7elLhu+PCTMg==}
     engines: {node: '>=18'}
 
   symbol-tree@3.2.4:
@@ -1868,6 +1942,10 @@ snapshots:
     dependencies:
       playwright: 1.53.0
 
+  '@playwright/test@1.53.1':
+    dependencies:
+      playwright: 1.53.1
+
   '@polka/url@1.0.0-next.29': {}
 
   '@publint/pack@0.1.2': {}
@@ -1940,6 +2018,10 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.5)(vite@6.3.5))(svelte@5.34.5)(vite@6.3.5)
 
+  '@sveltejs/adapter-auto@6.0.1(@sveltejs/kit@2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5))':
+    dependencies:
+      '@sveltejs/kit': 2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5)
+
   '@sveltejs/kit@2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.5)(vite@6.3.5))(svelte@5.34.5)(vite@6.3.5)':
     dependencies:
       '@sveltejs/acorn-typescript': 1.0.5(acorn@8.15.0)
@@ -1956,6 +2038,25 @@ snapshots:
       set-cookie-parser: 2.7.1
       sirv: 3.0.1
       svelte: 5.34.5
+      vite: 6.3.5
+      vitefu: 1.0.6(vite@6.3.5)
+
+  '@sveltejs/kit@2.21.5(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5)':
+    dependencies:
+      '@sveltejs/acorn-typescript': 1.0.5(acorn@8.15.0)
+      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.34.7)(vite@6.3.5)
+      '@types/cookie': 0.6.0
+      acorn: 8.15.0
+      cookie: 0.6.0
+      devalue: 5.1.1
+      esm-env: 1.2.2
+      kleur: 4.1.5
+      magic-string: 0.30.17
+      mrmime: 2.0.1
+      sade: 1.8.1
+      set-cookie-parser: 2.7.1
+      sirv: 3.0.1
+      svelte: 5.34.7
       vite: 6.3.5
       vitefu: 1.0.6(vite@6.3.5)
 
@@ -1979,6 +2080,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5)':
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.34.7)(vite@6.3.5)
+      debug: 4.4.1
+      svelte: 5.34.7
+      vite: 6.3.5
+    transitivePeerDependencies:
+      - supports-color
+
   '@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.5)(vite@6.3.5)':
     dependencies:
       '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.5)(vite@6.3.5))(svelte@5.34.5)(vite@6.3.5)
@@ -1987,6 +2097,19 @@ snapshots:
       kleur: 4.1.5
       magic-string: 0.30.17
       svelte: 5.34.5
+      vite: 6.3.5
+      vitefu: 1.0.6(vite@6.3.5)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5)':
+    dependencies:
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5))(svelte@5.34.7)(vite@6.3.5)
+      debug: 4.4.1
+      deepmerge: 4.3.1
+      kleur: 4.1.5
+      magic-string: 0.30.17
+      svelte: 5.34.7
       vite: 6.3.5
       vitefu: 1.0.6(vite@6.3.5)
     transitivePeerDependencies:
@@ -2017,6 +2140,14 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
       svelte: 5.34.5
+    optionalDependencies:
+      vite: 6.3.5
+      vitest: 3.2.4(jsdom@26.1.0)
+
+  '@testing-library/svelte@5.2.8(svelte@5.34.7)(vite@6.3.5)(vitest@3.2.4(jsdom@26.1.0))':
+    dependencies:
+      '@testing-library/dom': 10.4.0
+      svelte: 5.34.7
     optionalDependencies:
       vite: 6.3.5
       vitest: 3.2.4(jsdom@26.1.0)
@@ -2445,7 +2576,12 @@ snapshots:
       '@djot/djot': 0.3.2
       temml: 0.10.34
 
-  mathlify@0.4.3: {}
+  mathlifier@3.2.2:
+    dependencies:
+      '@djot/djot': 0.3.2
+      temml: 0.10.34
+
+  mathlify@0.4.9: {}
 
   merge2@1.4.1: {}
 
@@ -2526,9 +2662,17 @@ snapshots:
 
   playwright-core@1.53.0: {}
 
+  playwright-core@1.53.1: {}
+
   playwright@1.53.0:
     dependencies:
       playwright-core: 1.53.0
+    optionalDependencies:
+      fsevents: 2.3.2
+
+  playwright@1.53.1:
+    dependencies:
+      playwright-core: 1.53.1
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -2686,6 +2830,18 @@ snapshots:
     transitivePeerDependencies:
       - picomatch
 
+  svelte-check@4.2.1(picomatch@4.0.2)(svelte@5.34.7)(typescript@5.8.3):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      chokidar: 4.0.3
+      fdir: 6.4.6(picomatch@4.0.2)
+      picocolors: 1.1.1
+      sade: 1.8.1
+      svelte: 5.34.7
+      typescript: 5.8.3
+    transitivePeerDependencies:
+      - picomatch
+
   svelte2tsx@0.7.39(svelte@5.34.5)(typescript@5.8.3):
     dependencies:
       dedent-js: 1.0.1
@@ -2694,6 +2850,23 @@ snapshots:
       typescript: 5.8.3
 
   svelte@5.34.5:
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@jridgewell/sourcemap-codec': 1.5.0
+      '@sveltejs/acorn-typescript': 1.0.5(acorn@8.15.0)
+      '@types/estree': 1.0.8
+      acorn: 8.15.0
+      aria-query: 5.3.2
+      axobject-query: 4.1.0
+      clsx: 2.1.1
+      esm-env: 1.2.2
+      esrap: 1.4.9
+      is-reference: 3.0.3
+      locate-character: 3.0.0
+      magic-string: 0.30.17
+      zimmerframe: 1.1.2
+
+  svelte@5.34.7:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
