@@ -1,0 +1,40 @@
+{
+  "answer": {
+    "parts": [
+      {
+        "body": "Lee should carry out a one-tailed  $` \\QED  `\n\ttest because he is interested to test whether the mean number of birds has *reduced*"
+      },
+      {
+        "body": "Let $`\\mu` denote the population mean number of birds visiting the feeder in 20 minutes each morning\n\n$`H_0: \\mu = 17.3`\n\\\n$`H_1: \\mu < 17.3` $` \\QED  `"
+      },
+      {
+        "body": "\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mtext>Unbiased estimate of population mean</mtext></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><menclose notation=\"top\" class=\"tml-overline\"><mi>x</mi></menclose></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mrow><mo stretchy=\"true\" lspace=\"0em\" rspace=\"0em\">∑</mo><mi>x</mi></mrow><mi>n</mi></mfrac></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mn>512</mn><mn>32</mn></mfrac></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>16</mn><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\text{Unbiased estimate of population mean}\n\t\\\\ &= \\overline{x}\n\t\\\\ &= \\frac{\\sum x}{n}\n\t\\\\ &= \\frac{512}{32}\n\t\\\\ &= 16 \\; \\QED\n\\end{align*}\n```\n\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mtext>Unbiased estimate of population variance</mtext></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo stretchy=\"true\">∑</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mfrac><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo stretchy=\"true\">∑</mo><mi>x</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mi>n</mi></mfrac><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>32</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>8702</mn><mo>−</mo><mfrac><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>512</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mn>32</mn></mfrac><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mn>510</mn><mn>31</mn></mfrac><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\text{Unbiased estimate of population variance}\n\t\\\\ &= s^2\n\t\\\\ &= \\frac{1}{n - 1}\\left( \\sum x^2 - \\frac{\\left( \\sum x \\right)^2}{n} \\right)\n\t\\\\ &= \\frac{1}{32 - 1}\\left( 8702 - \\frac{\\left( 512 \\right)^2}{32} \\right)\n\t\\\\ &= \\frac{510}{31} \\; \\QED\n\\end{align*}\n```\n\n\t\nUnder $`H_0,`\n$$` \\displaystyle Z = \\frac{\\overline{X}-17.3}{\\sqrt{\\frac{\\frac{510}{31}^2}{32}}} \\sim \\mathrm{N}(0,1) `\napproximately by the Central Limit Theorem since $`{n=32}` is large\n\nBy GC,\n$$`  p\\text{-value} = 0.034911 `\n\nSince $`H_0` is rejected,\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mi>p</mi><mtext>-value</mtext></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>≤</mo><mi>α</mi><mi>%</mi></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mn>0.034911</mn></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>≤</mo><mfrac><mi>α</mi><mn>100</mn></mfrac></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mi>α</mi></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>≥</mo><mn>3.4911</mn></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} p\\text{-value} &\\leq \\alpha \\%\n\t\\\\ 0.034911 &\\leq \\frac{\\alpha }{100}\n\t\\\\ \\alpha  &\\geq 3.4911\n\\end{align*}\n```\n\n\nSince $`\\alpha` is an integer,\n$$`  \\text{Minimum integer } \\alpha = 4 \\; \\QED  `"
+      },
+      {
+        "body": "There is sufficient evidence at the $`\\alpha \\%`\nlevel of significance to conclude that the mean number of birds visiting the new bird feeder while he eats his breakfast has reduced $` \\QED  `"
+      },
+      {
+        "body": "It is insufficient as the distribution of the number of birds visiting his feeder\nis not known to be normal. Hence, for Lee to carry out his hypothesis test, he needs to use\nCentral Limit Theorem to justify that the mean number of birds visiting his feeder is normally\ndistributed approximately. $`{n= 10 <30}`\nso this sample size is not sufficient $` \\QED  `"
+      }
+    ]
+  },
+  "solution": {
+    "parts": [
+      {
+        "body": "Lee should carry out a one-tailed test\nbecause he is interested to test whether the mean number of birds has *reduced*."
+      },
+      {
+        "body": "$`H_0: \\mu = 17.3`\n\\\n$`H_1: \\mu < 17.3.`"
+      },
+      {
+        "body": "$` {\\overline{x}= 16}. `\n\\\n$` {s^2= \\frac{510}{31}}. `\n\\\nMinimum integer $` {\\alpha= 4 .} `"
+      },
+      {
+        "body": "There is sufficient evidence at the $`\\alpha \\%`\nlevel of significance to conclude that the mean number of birds visiting the new bird feeder while he eats his breakfast has reduced."
+      },
+      {
+        "body": "It is insufficient as the distribution of the number of birds visiting his feeder\nis not known to be normal. Hence, for Lee to carry out his hypothesis test, he needs to use\nCentral Limit Theorem to justify that the mean number of birds visiting his feeder is normally\ndistributed approximately. $`{n= 10 <30}`\nso this sample size is not sufficient."
+      }
+    ]
+  }
+}

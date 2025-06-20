@@ -1,0 +1,76 @@
+{
+  "answer": {
+    "parts": [
+      {
+        "parts": [
+          {
+            "body": "\n![finv-graph](/imgs/2024/solns/24p2q05a1.svg)\n"
+          },
+          {
+            "body": "\n![finv-translated-graph](/imgs/2024/solns/24p2q05a2.svg)\n"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "\n![mod-fx-graph](/imgs/2024/solns/24p2q05b1.svg)\n"
+          },
+          {
+            "body": "\n![f-mod-x-graph](/imgs/2024/solns/24p2q05b2.svg)\n"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "![parametric-curve](/imgs/2024/solns/24p2q05c.svg)"
+          },
+          {
+            "body": "$$`  (0,3) \\; \\QED  \\quad \\left( \\frac{9}{2}, 0 \\right) \\; \\QED  `"
+          },
+          {
+            "body": "Line of symmetry: $$` y=3 \\; \\QED  `"
+          }
+        ]
+      }
+    ]
+  },
+  "solution": {
+    "parts": [
+      {
+        "parts": [
+          {
+            "body": "Sketch."
+          },
+          {
+            "body": "Sketch."
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "Sketch."
+          },
+          {
+            "body": "Sketch."
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "Sketch."
+          },
+          {
+            "body": "$` {(0,3).} `\n$` {\\left( \\frac{9}{2}, 0 \\right).} `"
+          },
+          {
+            "body": "$` {y=3.} `"
+          }
+        ]
+      }
+    ]
+  }
+}

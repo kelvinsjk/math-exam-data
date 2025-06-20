@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "parts": [
+      {
+        "body": "![binomial-distribution](/imgs/2024/solns/24p2q09.svg)"
+      },
+      {
+        "body": "Let $`W` be the random variable of the number of pies that are\nunsatisfactory out of $` 50 `\nand let $`p` be the probability that a randomly chosen\npie is unsatisfactory\n\n$$`  W \\sim \\mathrm{B} (50, p ) `\n\nBy considering $` \\mathrm{E} \\left( W \\right), `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\"><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mi>n</mi><mi>p</mi><mo>≈</mo><mfrac><mrow><mo stretchy=\"true\" lspace=\"0em\" rspace=\"0em\">∑</mo><mi>f</mi><mi>w</mi></mrow><mrow><mo stretchy=\"true\" lspace=\"0em\" rspace=\"0em\">∑</mo><mi>f</mi></mrow></mfrac></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>50</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mi>p</mi><mo>≈</mo><mfrac><mrow><mn>0</mn><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>1</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>9</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>2</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>6</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>4</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>4</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mo>+</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>5</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>1</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow><mn>80</mn></mfrac></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mn>50</mn><mi>p</mi><mo>≈</mo><mfrac><mn>5</mn><mn>8</mn></mfrac></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mi>p</mi><mo>≈</mo><mn>0.0125</mn><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{gather*} np \\approx  \\frac{\\sum fw}{\\sum f}\n\t\\\\ \\left( 50 \\right)p \\approx  \\frac{0 + \\left( 1 \\right)\\left( 9 \\right) + \\left( 2 \\right)\\left( 6 \\right) + \\left( 3 \\right)\\left( 4 \\right) + \\left( 4 \\right)\\left( 3 \\right) + \\left( 5 \\right)\\left( 1 \\right)}{80}\n\t\\\\ 50p \\approx  \\frac{5}{8}\n\t\\\\ p \\approx  0.0125 \\; \\QED\n\\end{gather*}\n```\n"
+      },
+      {
+        "parts": [
+          {
+            "body": "The probability that each burger is found to have insufficient cheese in them is the same for each burger $` \\QED  `\n\\\nThe event that a burger is found to have insufficient cheese in them is independent of all other burgers. $` \\QED  `"
+          },
+          {
+            "body": "$$` Y \\sim \\mathrm{B} \\left( 120, 0.03 \\right) `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mrow><mi mathvariant=\"normal\">P</mi></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>Y</mi><mo>&lt;</mo><mn>3</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mrow><mi mathvariant=\"normal\">P</mi></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>Y</mi><mo>≤</mo><mn>2</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>0.29844</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>0.298</mn><mtext> (3 s.f.)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\mathrm{P} \\left( Y < 3 \\right)\n\t\\\\ &= \\mathrm{P} \\left( Y \\leq 2 \\right)\n\t\\\\ &= 0.29844 \\\\ &= 0.298 \\text{ (3 s.f.)} \\; \\QED\n\\end{align*}\n```\n"
+          },
+          {
+            "body": "Let $`D` denote the random variable of the number of days in which\nfewer than 3 burgers have insufficient cheese in them out of $` 28 `\n\n$$` D \\sim \\mathrm{B} \\left( 28, 0.29844 \\right) `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mrow><mi mathvariant=\"normal\">E</mi></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>D</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mi>n</mi><mi>p</mi></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>28</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>0.29844</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>8.3562</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>8.36</mn><mtext> days (3 s.f.)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\mathrm{E} \\left( D \\right)\n\t\\\\ &= np\n\t\\\\ &= \\left( 28 \\right)\\left( 0.29844 \\right)\n\t\\\\ &= 8.3562 \\\\ &= 8.36 \\text{ days (3 s.f.)} \\; \\QED\n\\end{align*}\n```\n"
+          },
+          {
+            "body": "Let $`T` denote the random variable of the number of burgers\nfound to have insufficient cheese in them out of $` {120 \\times  28 = 3360} `\nburgers in $` 28 `\ndays\n\n$$` T \\sim \\mathrm{B} \\left( 3360, 0.03 \\right) `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mrow><mi mathvariant=\"normal\">P</mi></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>T</mi><mo>&gt;</mo><mn>100</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant=\"normal\">P</mi></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>T</mi><mo>≤</mo><mn>100</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>0.50578</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>0.506</mn><mtext> (3 s.f.)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\mathrm{P} \\left( T > 100 \\right)\n\t\\\\ &= 1 - \\mathrm{P} \\left( T \\leq 100 \\right)\n\t\\\\ &= 0.50578 \\\\ &= 0.506 \\text{ (3 s.f.)} \\; \\QED\n\\end{align*}\n```\n"
+          }
+        ]
+      }
+    ]
+  },
+  "solution": {
+    "parts": [
+      {
+        "body": "Sketch."
+      },
+      {
+        "body": "$`  0.0125. `"
+      },
+      {
+        "parts": [
+          {
+            "body": "The probability that each burger is found to have insufficient cheese in them is the same for each burger.\n\\\nThe event that a burger is found to have insufficient cheese in them is independent of all other burgers.."
+          },
+          {
+            "body": "$` 0.298. `"
+          },
+          {
+            "body": "$` 8.36 \\text{ days}. `"
+          },
+          {
+            "body": "$` 0.506. `"
+          }
+        ]
+      }
+    ]
+  }
+}

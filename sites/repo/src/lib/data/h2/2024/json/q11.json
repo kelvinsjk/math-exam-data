@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "parts": [
+      {
+        "parts": [
+          {
+            "body": "The scatter diagram shows that, as $`m` increases,\n$`p` increases at a decreasing rate on average. This indicate\na likely non-linear relationship between $`m` and $`p` $` \\QED  `\n"
+          },
+          {
+            "body": "The $` p = d + e \\sqrt{m} `\nmodel gives a better fit to the data as it has an $`r\\text{-value}`\nof $` 0.991 \\; \\QED  `\nwhich is closer to $`1` than the $`r\\text{-value}`\nof $` 0.929 `\nfor the $` {p = a + b \\ln m} `\nmodel\n\n$$`  p = 32.953 + 17.270\\sqrt{m}  `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mi>d</mi></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>33.0</mn><mtext> (3 s.f.)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mi>e</mi></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>17.3</mn><mtext> (3 s.f.)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} d &= 33.0 \\text{ (3 s.f.)} \\; \\QED \n\\\\ e &= 17.3 \\text{ (3 s.f.)} \\; \\QED\n\\end{align*}\n```\n"
+          },
+          {
+            "body": "When $` {m= 750 ,} `\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mi>p</mi></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>32.953</mn><mo>+</mo><mn>17.270</mn><msqrt><mn>750</mn></msqrt></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>505.91</mn></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mn>510</mn><mtext> cents (nearest 10 cents)</mtext><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} p &= 32.953 + 17.270\\sqrt{750}\n\t\\\\  &= 505.91 \\\\ &= 510 \\text{ cents (nearest 10 cents)} \\; \\QED\n\\end{align*}\n```\n\n\nSince $` {m= 750} `\nis within the given data range $`  24 \\leq m \\leq 5000, `\nand the $` {r\\text{-value}= 0.991} `\nis close to $`1,` our estimate is reliable $` \\QED  `"
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "![scatter-plot](/imgs/2024/solns/24p2q11bi.svg)"
+          },
+          {
+            "body": "(A) ![residuals](/imgs/2024/solns/24p2q11bii.svg)\n\n\n\n(B) The residuals can be negative or positive depending\non whether the point is above or below the regression line.\nHence, using the sum of the squares of the residuals ensure the error\nvalues used in assessing the fit of the model are positive $` \\QED  `\n\n(C)\n\n|:--:|:--:|:--:|:--:|:--:|:--:|:--:|\n| $`n`  | 2  | 5  | 6  | 7  | 11  |\n| $`y`  | 6  | 10  | 16  | 20  | 25  |\n| $`f(n)=\\frac{5}{2}n + 1`  | $`6`  | $`\\frac{27}{2}`  | $`16`  | $`\\frac{37}{2}`  | $`\\frac{57}{2}`  |\n| $`\\text{Residuals }=y-f(n)`  | $`0`  | $`- \\frac{7}{2}`  | $`0`  | $`\\frac{3}{2}`  | $`- \\frac{7}{2}`  |\n\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\" columnalign=\"right left\"><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mtext>Sum of squares</mtext></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mn>0</mn><mn>2</mn></msup><mo>+</mo><msup><mfrac><mn>3</mn><mn>2</mn></mfrac><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup></mrow></mtd></mtr><mtr><mtd class=\"tml-right\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow></mrow></mtd><mtd class=\"tml-left\" style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>=</mo><mfrac><mn>107</mn><mn>4</mn></mfrac><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{align*} & \\text{Sum of squares} \\\\ &= 0^2 + \\left( - \\frac{7}{2} \\right)^2 + 0^2 + \\frac{3}{2}^2 + \\left( - \\frac{7}{2} \\right)^2\n\t\\\\ &= \\frac{107}{4} \\; \\QED\n\\end{align*}\n```\n"
+          },
+          {
+            "body": "For a line that is a better fit for the data,\nthe sum of the squares of the residuals will be smaller $` \\QED  `"
+          },
+          {
+            "body": "|:--:|:--:|:--:|:--:|:--:|:--:|:--:|\n| $`n`  | 2  | 5  | 6  | 7  | 11  |\n| $`y`  | 6  | 10  | 16  | 20  | 25  |\n| $`f(n)=\\frac{5}{2}n + c`  | $`5 + c`  | $`\\frac{25}{2} + c`  | $`15 + c`  | $`\\frac{35}{2} + c`  | $`\\frac{55}{2} + c`  |\n| $`\\text{Residuals }=y-f(n)`  | $`1 - c`  | $`- \\frac{5}{2} - c`  | $`1 - c`  | $`\\frac{5}{2} - c`  | $`- \\frac{5}{2} - c`  |\n\nConsidering the sum of squares,\n\n``` =html\n<div class=\"display-math-container\">\n<math display=\"block\" class=\"tml-display\" style=\"display:block math;\"><mtable displaystyle=\"true\"><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>1</mn><mo>−</mo><mi>c</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>−</mo><mi>c</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>1</mn><mo>−</mo><mi>c</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>−</mo><mi>c</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mo form=\"prefix\" stretchy=\"false\">−</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>−</mo><mi>c</mi><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mn>2</mn></msup><mo>&lt;</mo><mfrac><mn>107</mn><mn>4</mn></mfrac></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mn>5</mn><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi><mo>+</mo><mfrac><mn>83</mn><mn>4</mn></mfrac><mo>&lt;</mo><mfrac><mn>107</mn><mn>4</mn></mfrac></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mn>5</mn><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi><mo>−</mo><mn>6</mn><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mn>5</mn><mi>c</mi><mo>+</mo><mn>6</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mrow><mo fence=\"true\" form=\"prefix\">(</mo><mi>c</mi><mo>−</mo><mn>1</mn><mo fence=\"true\" form=\"postfix\">)</mo></mrow><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd style=\"padding:0.7ex 0em 0.7ex 0em;\"><mrow><mo>−</mo><mfrac><mn>6</mn><mn>5</mn></mfrac><mo>&lt;</mo><mi>c</mi><mo>&lt;</mo><mn>1</mn><mspace width=\"0.2778em\"></mspace><mi>∎</mi></mrow></mtd></mtr></mtable></math>\n</div>\n```\n\n``` =tex\n\\begin{gather*} \\left( 1 - c \\right)^2 + \\left( - \\frac{5}{2} - c \\right)^2 + \\left( 1 - c \\right)^2 + \\left( \\frac{5}{2} - c \\right)^2 + \\left( - \\frac{5}{2} - c \\right)^2 < \\frac{107}{4}\n\t\\\\ 5c^2 + c + \\frac{83}{4} < \\frac{107}{4}\n\t\\\\ 5c^2 + c - 6 < 0\n\t\\\\ \\left( 5c + 6 \\right)\\left( c - 1 \\right) < 0 \\\\ - \\frac{6}{5} < c < 1 \\; \\QED\n\\end{gather*}\n```\n"
+          }
+        ]
+      }
+    ]
+  },
+  "solution": {
+    "parts": [
+      {
+        "parts": [
+          {
+            "body": "The scatter diagram shows that, as $`m` increases,\n$`p` increases at a decreasing rate on average. This indicate\na likely non-linear relationship between $`m` and $`p.`"
+          },
+          {
+            "body": "$` p = d + e \\sqrt{m} `\n\\\n$` {r= 0.991 .} `"
+          },
+          {
+            "body": "$` 510 \\text{ cents}. `\n\nSince $` {m= 750} `\nis within the given data range $`  24 \\leq m \\leq 5000, `\nand the $` {r\\text{-value}= 0.991} `\nis close to $`1,` our estimate is reliable."
+          }
+        ]
+      },
+      {
+        "parts": [
+          {
+            "body": "Sketch."
+          },
+          {
+            "body": "(B) The residuals can be negative or positive depending\non whether the point is above or below the regression line.\nHence, using the sum of the squares of the residuals ensure the error\nvalues used in assessing the fit of the model are positive.\n\n(C) Sum of squares = $` \\frac{107}{4}. `"
+          },
+          {
+            "body": "For a line that is a better fit for the data,\nthe sum of the squares of the residuals will be smaller."
+          },
+          {
+            "body": "$` - \\frac{6}{5} < c < 1. `"
+          }
+        ]
+      }
+    ]
+  }
+}
